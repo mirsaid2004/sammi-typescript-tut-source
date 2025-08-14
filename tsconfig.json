@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    // FILE BILAN ISHLASH uchun kerakli sozlamalar
+    // "files": ["./src/index.ts"], bu qatorni faollashtirish orqali faqat bitta faylni kompilyatsiya qilish mumkin
+    // "include": ["src/**/*"], // Barcha src papkasidagi fayllarni qo'shish
+    // "exclude": ["node_modules", "**/*.spec.ts"], // node_modules va test fayllarni chiqarib tashlash
+    // "outDir": "./dist", // Kompilyatsiya qilingan fayllarni saqlash joyi
+    // "rootDir": "./src", // Asosiy manba fayllar joy
+
+    // ASOSIY KONFIGURATSIYA
+    // "target": 'ES2020', // JavaScript versiyasi ES2020 ga o'rnatilgan
+    // "experimentalDecorators": true, // Dekoratorlarni qo'llab-quvvatlash
+    // "module": "commonjs", // Modullarni CommonJS formatida ishlatish
+    // "moduleResolution": "node", // Modullarni Node.js uslubida qidirish, ushbu sozlama TypeScript fayllarini Node.js muhitida ishlatish uchun zarur. Agar classic modul qidirish usuli ishlatilsa, fayllar noto'g'ri topilishi mumkin.
+    // "strict": true, // TypeScriptning qat'iy tekshirish rejimini yoqish
+    // "noImplicitAny": true, // Har qanday o'zgaruvchiga aniq tur belgilanmagan bo'lsa, TypeScript xatolik beradi
+    // "strictPropertyInitialization": true, // Har bir klass xususiyati konstruktor ichida to'liq initsializatsiya qilinishi kerak
+    // "removeComments": true, // Kompilyatsiya jarayonida barcha izohlarni olib tashlash
+    // "skipLibCheck": true, // Kutubxonalar tekshirilishini o'tkazib yuborish, bu tezlikni oshiradi, *.d.ts fayllarini tekshirishni o'chiradi
+
+    // KERAKLE KONFIGURATSIYA
+    // "baseUrl": "./", // Asosiy manba fayllar joyi, bu sozlama TypeScript fayllarini to'g'ri import qilish uchun zarur
+    // "paths": {
+    //   "@/*": ["*"] // Aliasing, bu orqali src papkasidagi fayllarni qisqa yo'l bilan import qilish mumkin
+    // },
+    // "strictNullChecks": true, // Null va undefined qiymatlarni qat'iy tekshirish
+    // "noImplicitThis": true, // this kontekstini aniq belgilash
+    // "noUnusedLocals": true, // Foydalanilmagan lokal o'zgaruvchilarni tekshirish
+    // "noUnusedParameters": true, // Foydalanilmagan parametrlarni tekshirish
+    // "noImplicitReturns": true, // Funksiyalar uchun aniq qaytish qiymatini belgilash
+    // "noFallthroughCasesInSwitch": true, // Switch case bloklarida o'tish holatlarini tekshirish
+    // "forceConsistentCasingInFileNames": true, // Fayl nomlarini qat'iy tekshirish, bu Windows va Linux tizimlarida fayl nomlari katta-kichik harflarga sezgir bo'lishi uchun zarur
+    // "resolveJsonModule": true, // JSON fayllarni import qilish uchun zarur
+    // "allowJs": true, // JavaScript fayllarni TypeScript bilan birga ishlatish uchun zarur. Checkjs ni true qilib qo'yish orqali JavaScript fayllarini TypeScript bilan tekshirish mumkin
+    // "checkJs": true, // JavaScript fayllarini TypeScript bilan tekshirish uchun zarur
+    // "decleration": true, // Deklaratsiya fayllarini yaratish, bu orqali TypeScript fayllarini JavaScript bilan birga ishlatish mumkin
+    // "emitDecoratorMetadata": true, // Dekorator metadata ni chiqarish, bu orqali dekoratorlarni ishlatish mumkin
+    // "sourceMap": true, // Source map fayllarni yaratish, bu orqali TypeScript fayllarini JavaScript bilan birga ishlatish mumkin
+    // "noEmit": false, // shunchaki kompilyatsiya qilish, lekin fayllarni chiqarish emas
+
+    // FOYDALI KONFIGURATSIYA
+    // "alwaysStrict": true, // Har bir fayl ichida "use strict" yoziladi.
+    // "newLine": "LF", // Yangi qator belgisi sifatida LF (Line Feed) ishlatiladi, bu Linux va macOS tizimlarida standart hisoblanadi. CRLF (Carriage Return + Line Feed) esa Windows tizimlarida ishlatiladi.
+    // "preserveConstEnums": true, // default it is false, in that case our enum won't be preserved in the output, it will be replaced with the value of the enum. If we set it to true, the enum will be preserved in the output.
+    // "noUncheckedIndexedAccess": true, // Indexed access types are not checked for undefined or null values, especially in objects and arrays. This can help catch potential runtime errors.
+    // "noPropertyAccessFromIndexSignature": true, // This option prevents accessing properties directly from index signatures, which can help catch potential errors in code that relies on dynamic property access.
+
+    // "target": "es6",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": true, // Ensures all properties are initialized in the constructor
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
