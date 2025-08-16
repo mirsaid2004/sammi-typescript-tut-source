@@ -47,6 +47,7 @@
 
     // "target": "es6",
     "module": "commonjs",
+    "stripInternal": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "target": "ES2020",
