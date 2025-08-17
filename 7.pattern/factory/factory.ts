@@ -32,7 +32,7 @@ class Teacher implements Person {
 
 class PersonFactory {
   private constructor() {}
-  public static createPerson(type: string, name: string): Person {
+  public static createPerson(type: PersonType, name: string): Person {
     switch (type) {
       case PersonType.STUDENT:
         return new Student(name);
