@@ -8,12 +8,13 @@
     "paths": {
       "@/*": ["src/*"]
     },
+  
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "commonjs",
+    "module":"amd",
     "target": "es2020",
-    "types": [],
+    "types": ["node"],
     "allowJs": true,
     "checkJs": true,
     // For nodejs:
@@ -42,9 +43,10 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    // "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
+    "moduleResolution": "node",
     "moduleDetection": "force",
     "skipLibCheck": true,
   }
