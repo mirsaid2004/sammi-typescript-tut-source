@@ -1,3 +1,4 @@
+import { CREATE_ENQUERY } from "@/constants/create-inquirer";
 import { ICommand } from "@/core/command";
 import { Context } from "@/core/context";
 import { MemorizationProgress } from "@/types/types";
@@ -7,23 +8,7 @@ export class AddEntryCommand implements ICommand {
     constructor(private context: Context) {}
 
     async execute() {
-        const answers = await inquirer.prompt([
-            {
-                type: "input",
-                name: "surah",
-                message: "Enter Surah name",
-            }, 
-            {
-                type: "input",
-                name: "fromAyah",
-                message: "From which Ayah?",
-            }, 
-            {
-                type: "input",
-                name: "toAyah",
-                message: "To which Ayah?",
-            }
-        ])
+        const answers = await inquirer.prompt(CREATE_ENQUERY)
 
         const newEntry: MemorizationProgress = {
             surah: answers.surah,

@@ -1,8 +1,14 @@
 [
   {
-    "surah": "al-Fatiha",
-    "fromAyah": null,
-    "toAyah": 1,
-    "date": "2025-08-19T21:11:36.064Z"
+    "surah": "Al-Fatiha",
+    "fromAyah": 1,
+    "toAyah": 7,
+    "date": "2025-08-19T22:13:16.970Z"
+  },
+  {
+    "surah": "Al-Baqara",
+    "fromAyah": 1,
+    "toAyah": 32,
+    "date": "2025-08-19T22:24:04.843Z"
   }
 ]

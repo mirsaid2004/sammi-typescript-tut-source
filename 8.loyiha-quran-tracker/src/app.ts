@@ -5,6 +5,9 @@ import { StorageSingleton } from './storage/storage.singleton';
 import { AddEntryCommand } from './commands/add-entry.command';
 import { ShowEntriesCommand } from './commands/show-entries.command';
 import { ExitCommand } from './commands/exit-command';
+import { DeleteEntryCommand } from './commands/delete-entry.command';
+import { EditEntryCommand } from './commands/edit-entry.command';
+import { StatsCommand } from './commands/stats.command';
 
 const executor = new CommandExecutor();
 const context = new Context(StorageSingleton.getInstance())
@@ -18,7 +21,7 @@ async function bootstrap() {
             choices: [
                 '➕ New memorization entry',
                 '📜 Show memorization entries',
-                '🗑️ Delete memorization entry',
+                '🗑️  Delete memorization entry',
                 '🔄 Update memorization entry',
                 '📊 Show statistics',
                 '❌ Exit'
@@ -37,14 +40,20 @@ async function bootstrap() {
                 new ShowEntriesCommand(context)
             )
             break;
-        case '🗑️ Delete memorization entry':
-            // Handle deleting an entry
+        case '🗑️  Delete memorization entry':
+            await executor.run(
+                new DeleteEntryCommand(context)
+            )
             break;
         case '🔄 Update memorization entry':
-            // Handle updating an entry
+            await executor.run(
+                new EditEntryCommand(context)
+            )
             break;
         case '📊 Show statistics':
-            // Handle showing statistics
+            await executor.run(
+                new StatsCommand(context)
+            );
             break;
         case '❌ Exit':
             await executor.run(
