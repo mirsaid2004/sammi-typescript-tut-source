@@ -3,7 +3,8 @@ import path from 'path';
 import { StorageStrategy } from './storage.strategy';
 import { MemorizationProgress } from '@/types/types';
 
-const filePath = path.join(__dirname, '../data/progress.json');
+const filePath = path.join(__dirname, '../../data/progress.json');
+console.log({filePath})
 
 export class JSONStorage implements StorageStrategy {
     load(): MemorizationProgress[] {
